@@ -6,7 +6,7 @@ export const personalInfo = {
     "Results-driven operations professional with 6+ years of experience in journal publication and logistics, specializing in process optimization, team leadership, and delivering exceptional quality at scale.",
   email: "akhilgowtham@gmail.com",
   location: "Chennai, India",
-  linkedin: "https://www.linkedin.com/in/gowtham-senthamilselvan",
+  linkedin: "https://www.linkedin.com/in/akhilgowtham",
 };
 
 export const stats = [
