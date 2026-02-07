@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { navLinks } from "@/data/resume";
 
 export default function Navbar() {
@@ -61,15 +61,32 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/resume.pdf"
+              download
+              className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-colors"
+            >
+              <Download size={14} />
+              Resume
+            </a>
           </div>
 
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile toggle + download */}
+          <div className="flex md:hidden items-center gap-2">
+            <a
+              href="/resume.pdf"
+              download
+              className="p-2 rounded-lg text-primary hover:bg-primary/10 transition-colors"
+            >
+              <Download size={20} />
+            </a>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 

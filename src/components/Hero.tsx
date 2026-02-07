@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown, Mail, Download } from "lucide-react";
 import { personalInfo } from "@/data/resume";
@@ -22,17 +23,22 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Avatar */}
+          {/* Profile Photo */}
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mx-auto mb-8 w-28 h-28 rounded-full animated-gradient flex items-center justify-center"
+            className="mx-auto mb-8 w-36 h-36 rounded-full p-[3px] animated-gradient"
           >
-            <div className="w-[104px] h-[104px] rounded-full bg-background flex items-center justify-center">
-              <span className="text-3xl font-bold gradient-text font-[family-name:var(--font-poppins)]">
-                {personalInfo.initials}
-              </span>
+            <div className="w-full h-full rounded-full overflow-hidden">
+              <Image
+                src="/01.jpg"
+                alt={personalInfo.name}
+                width={144}
+                height={144}
+                priority
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 
@@ -81,11 +87,12 @@ export default function Hero() {
               Get in Touch
             </a>
             <a
-              href="#about"
+              href="/resume.pdf"
+              download
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-border text-gray-300 font-semibold hover:bg-white/5 transition-colors"
             >
               <Download size={18} />
-              View Resume
+              Download Resume
             </a>
           </motion.div>
         </motion.div>
