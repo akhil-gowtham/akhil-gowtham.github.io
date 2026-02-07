@@ -75,10 +75,10 @@ export default function Skills() {
                   >
                     {Icon && <Icon size={20} className="text-white" />}
                   </div>
-                  <h3 className="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">
+                  <h3 className="text-sm font-semibold text-muted-strong group-hover:text-heading transition-colors">
                     {skill.name}
                   </h3>
-                  <span className="text-xs text-gray-500 mt-1 block">
+                  <span className="text-xs text-muted mt-1 block">
                     {skill.category}
                   </span>
                 </motion.div>

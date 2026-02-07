@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, Sun, Moon } from "lucide-react";
 import { navLinks } from "@/data/resume";
+import { useTheme } from "./ThemeProvider";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,24 +57,38 @@ export default function Navbar() {
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   activeSection === link.href.replace("#", "")
                     ? "text-primary bg-primary/10"
-                    : "text-gray-400 hover:text-white hover:bg-white/5"
+                    : "text-muted hover:text-heading hover:bg-foreground/5"
                 }`}
               >
                 {link.label}
               </a>
             ))}
+            <button
+              onClick={toggleTheme}
+              className="ml-1 p-2 rounded-lg text-muted hover:text-heading hover:bg-foreground/5 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
             <a
               href="/resume.pdf"
               download
-              className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-colors"
+              className="ml-1 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-colors"
             >
               <Download size={14} />
               Resume
             </a>
           </div>
 
-          {/* Mobile toggle + download */}
-          <div className="flex md:hidden items-center gap-2">
+          {/* Mobile toggle + theme + download */}
+          <div className="flex md:hidden items-center gap-1">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg text-muted hover:text-heading hover:bg-foreground/5 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
             <a
               href="/resume.pdf"
               download
@@ -82,7 +98,7 @@ export default function Navbar() {
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5"
+              className="p-2 rounded-lg text-muted hover:text-heading hover:bg-foreground/5"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -108,7 +124,7 @@ export default function Navbar() {
                   className={`block px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     activeSection === link.href.replace("#", "")
                       ? "text-primary bg-primary/10"
-                      : "text-gray-400 hover:text-white hover:bg-white/5"
+                      : "text-muted hover:text-heading hover:bg-foreground/5"
                   }`}
                 >
                   {link.label}

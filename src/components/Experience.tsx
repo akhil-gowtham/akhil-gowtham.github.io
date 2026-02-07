@@ -52,14 +52,14 @@ export default function Experience() {
                       {exp.type}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mt-3 font-[family-name:var(--font-poppins)]">
+                  <h3 className="text-xl font-bold text-heading mt-3 font-[family-name:var(--font-poppins)]">
                     {exp.role}
                   </h3>
                   <div className="flex items-center gap-2 text-primary font-semibold mt-1">
                     <Briefcase size={16} />
                     {exp.company}
                   </div>
-                  <div className="flex flex-wrap gap-4 mt-2 text-sm text-gray-400">
+                  <div className="flex flex-wrap gap-4 mt-2 text-sm text-muted">
                     <span className="flex items-center gap-1">
                       <Calendar size={14} />
                       {exp.duration}
@@ -73,7 +73,7 @@ export default function Experience() {
                     {exp.highlights.map((h, j) => (
                       <li
                         key={j}
-                        className="text-sm text-gray-300 flex items-start gap-2"
+                        className="text-sm text-muted-strong flex items-start gap-2"
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
                         {h}

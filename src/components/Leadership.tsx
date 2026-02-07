@@ -56,10 +56,10 @@ export default function Leadership() {
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-secondary-light flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     {Icon && <Icon size={24} className="text-white" />}
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2 font-[family-name:var(--font-poppins)]">
+                  <h3 className="text-lg font-semibold text-heading mb-2 font-[family-name:var(--font-poppins)]">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">
+                  <p className="text-sm text-muted leading-relaxed">
                     {item.description}
                   </p>
                 </motion.div>

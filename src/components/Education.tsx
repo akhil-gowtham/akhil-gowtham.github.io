@@ -35,16 +35,16 @@ export default function Education() {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center mb-4">
                   <GraduationCap size={24} className="text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white font-[family-name:var(--font-poppins)]">
+                <h3 className="text-lg font-bold text-heading font-[family-name:var(--font-poppins)]">
                   {edu.degree}
                 </h3>
                 <p className="text-primary font-medium mt-1">
                   {edu.institution}
                 </p>
-                <p className="text-sm text-gray-400 mt-1">
+                <p className="text-sm text-muted mt-1">
                   {edu.specialization}
                 </p>
-                <div className="flex items-center gap-1 text-sm text-gray-500 mt-3">
+                <div className="flex items-center gap-1 text-sm text-muted mt-3">
                   <Calendar size={14} />
                   {edu.duration}
                 </div>

@@ -44,10 +44,10 @@ export default function Publications() {
                     <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-secondary/10 text-secondary">
                       {pub.type}
                     </span>
-                    <h3 className="text-base font-semibold text-white mt-2">
+                    <h3 className="text-base font-semibold text-heading mt-2">
                       {pub.title}
                     </h3>
-                    <p className="text-sm text-gray-400 mt-1">
+                    <p className="text-sm text-muted mt-1">
                       Published in{" "}
                       <span className="text-secondary">{pub.journal}</span>
                     </p>
@@ -71,10 +71,10 @@ export default function Publications() {
                   <Trophy size={20} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold text-white">
+                  <h3 className="text-base font-semibold text-heading">
                     {ach.title}
                   </h3>
-                  <p className="text-sm text-gray-400 mt-1">
+                  <p className="text-sm text-muted mt-1">
                     {ach.description}
                   </p>
                 </div>

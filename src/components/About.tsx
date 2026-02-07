@@ -35,7 +35,7 @@ function AnimatedCounter({ value, label }: { value: string; label: string }) {
         {isInView ? count : 0}
         {suffix}
       </div>
-      <div className="text-sm text-gray-400 mt-1">{label}</div>
+      <div className="text-sm text-muted mt-1">{label}</div>
     </div>
   );
 }
@@ -60,10 +60,10 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-gray-300 leading-relaxed text-lg mb-6">
+              <p className="text-muted-strong leading-relaxed text-lg mb-6">
                 {aboutText}
               </p>
-              <div className="flex items-center gap-2 text-gray-400">
+              <div className="flex items-center gap-2 text-muted">
                 <MapPin size={18} className="text-primary" />
                 <span>{personalInfo.location}</span>
               </div>

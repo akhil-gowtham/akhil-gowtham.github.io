@@ -57,7 +57,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-xl sm:text-2xl text-gray-400 mb-6 font-medium"
+            className="text-xl sm:text-2xl text-muted mb-6 font-medium"
           >
             {personalInfo.title}
           </motion.p>
@@ -67,7 +67,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-base sm:text-lg text-muted max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             {personalInfo.tagline}
           </motion.p>
@@ -89,7 +89,7 @@ export default function Hero() {
             <a
               href="/resume.pdf"
               download
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-border text-gray-300 font-semibold hover:bg-white/5 transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-border text-muted-strong font-semibold hover:bg-foreground/5 transition-colors"
             >
               <Download size={18} />
               Download Resume
@@ -108,7 +108,7 @@ export default function Hero() {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <ArrowDown size={24} className="text-gray-500" />
+            <ArrowDown size={24} className="text-muted" />
           </motion.div>
         </motion.div>
       </div>

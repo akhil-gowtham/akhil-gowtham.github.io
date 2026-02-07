@@ -16,7 +16,6 @@ export default function Contact() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Visual-only form — can be wired to an API later
     alert("Thank you for your message! This form will be connected to a backend soon.");
     setFormData({ name: "", email: "", message: "" });
   };
@@ -42,10 +41,10 @@ export default function Contact() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="text-2xl font-bold text-white mb-6 font-[family-name:var(--font-poppins)]">
+              <h3 className="text-2xl font-bold text-heading mb-6 font-[family-name:var(--font-poppins)]">
                 Let&apos;s Connect
               </h3>
-              <p className="text-gray-400 mb-8 leading-relaxed">
+              <p className="text-muted mb-8 leading-relaxed">
                 I&apos;m always open to discussing new opportunities, collaborations,
                 or simply connecting with fellow professionals. Feel free to
                 reach out!
@@ -60,8 +59,8 @@ export default function Contact() {
                     <Mail size={20} className="text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400">Email</div>
-                    <div className="text-white">{personalInfo.email}</div>
+                    <div className="text-sm text-muted">Email</div>
+                    <div className="text-heading">{personalInfo.email}</div>
                   </div>
                 </a>
 
@@ -73,8 +72,8 @@ export default function Contact() {
                     <Phone size={20} className="text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400">Phone</div>
-                    <div className="text-white">{personalInfo.phone}</div>
+                    <div className="text-sm text-muted">Phone</div>
+                    <div className="text-heading">{personalInfo.phone}</div>
                   </div>
                 </a>
 
@@ -83,8 +82,8 @@ export default function Contact() {
                     <MapPin size={20} className="text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400">Location</div>
-                    <div className="text-white">{personalInfo.location}</div>
+                    <div className="text-sm text-muted">Location</div>
+                    <div className="text-heading">{personalInfo.location}</div>
                   </div>
                 </div>
 
@@ -98,8 +97,8 @@ export default function Contact() {
                     <Linkedin size={20} className="text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400">LinkedIn</div>
-                    <div className="text-white">Connect on LinkedIn</div>
+                    <div className="text-sm text-muted">LinkedIn</div>
+                    <div className="text-heading">Connect on LinkedIn</div>
                   </div>
                 </a>
               </div>
@@ -115,7 +114,7 @@ export default function Contact() {
                 <div className="mb-6">
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-400 mb-2"
+                    className="block text-sm font-medium text-muted mb-2"
                   >
                     Your Name
                   </label>
@@ -126,7 +125,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-xl bg-background border border-border text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-input-bg border border-border text-foreground placeholder-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                     placeholder="John Doe"
                     required
                   />
@@ -134,7 +133,7 @@ export default function Contact() {
                 <div className="mb-6">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-400 mb-2"
+                    className="block text-sm font-medium text-muted mb-2"
                   >
                     Email Address
                   </label>
@@ -145,7 +144,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-xl bg-background border border-border text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-input-bg border border-border text-foreground placeholder-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                     placeholder="john@example.com"
                     required
                   />
@@ -153,7 +152,7 @@ export default function Contact() {
                 <div className="mb-6">
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-400 mb-2"
+                    className="block text-sm font-medium text-muted mb-2"
                   >
                     Message
                   </label>
@@ -164,7 +163,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-xl bg-background border border-border text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-input-bg border border-border text-foreground placeholder-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
                     placeholder="Your message..."
                     required
                   />

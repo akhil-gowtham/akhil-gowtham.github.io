@@ -1,8 +1,37 @@
 @import "tailwindcss";
 
+/* Light mode (default) */
 :root {
+  --background: #f8f9fc;
+  --foreground: #1a1a2e;
+  --surface: #ffffff;
+  --surface-light: #f0f1f5;
+  --border: #e2e4eb;
+  --muted: #6b7280;
+  --muted-strong: #374151;
+  --heading: #111827;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(0, 0, 0, 0.06);
+  --scrollbar-thumb: #c4c7ce;
+  --scrollbar-hover: #a1a5ae;
+  --input-bg: #ffffff;
+}
+
+/* Dark mode */
+.dark {
   --background: #0a0a0f;
   --foreground: #ededed;
+  --surface: #1a1a2e;
+  --surface-light: #25253e;
+  --border: #2a2a4a;
+  --muted: #9ca3af;
+  --muted-strong: #d1d5db;
+  --heading: #ffffff;
+  --card-bg: rgba(26, 26, 46, 0.6);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --scrollbar-thumb: #3a3a5a;
+  --scrollbar-hover: #4a4a6a;
+  --input-bg: #0a0a0f;
 }
 
 @theme inline {
@@ -14,9 +43,14 @@
   --color-secondary: #14b8a6;
   --color-secondary-light: #2dd4bf;
   --color-secondary-dark: #0d9488;
-  --color-surface: #1a1a2e;
-  --color-surface-light: #25253e;
-  --color-border: #2a2a4a;
+  --color-surface: var(--surface);
+  --color-surface-light: var(--surface-light);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-strong: var(--muted-strong);
+  --color-heading: var(--heading);
+  --color-card-bg: var(--card-bg);
+  --color-input-bg: var(--input-bg);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-poppins);
 }
@@ -25,6 +59,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -45,20 +80,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3a3a5a;
+  background: var(--scrollbar-thumb);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4a4a6a;
+  background: var(--scrollbar-hover);
 }
 
 /* Glassmorphism utility */
 .glass {
-  background: rgba(26, 26, 46, 0.6);
+  background: var(--card-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--card-border);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 /* Gradient text */
@@ -89,6 +125,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .glow-teal {
   box-shadow: 0 0 40px rgba(20, 184, 166, 0.15);
+}
+
+/* Light mode: softer shadows instead of glows */
+:root:not(.dark) .glow-orange {
+  box-shadow: 0 4px 24px rgba(249, 115, 22, 0.1), 0 1px 3px rgba(0,0,0,0.06);
+}
+
+:root:not(.dark) .glow-teal {
+  box-shadow: 0 4px 24px rgba(20, 184, 166, 0.1), 0 1px 3px rgba(0,0,0,0.06);
 }
 
 /* Timeline connector */

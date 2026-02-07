@@ -32,10 +32,10 @@ export default function Resume() {
               <FileText size={32} className="text-white" />
             </div>
 
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 font-[family-name:var(--font-poppins)]">
+            <h3 className="text-xl sm:text-2xl font-bold text-heading mb-3 font-[family-name:var(--font-poppins)]">
               Download My Full Resume
             </h3>
-            <p className="text-gray-400 max-w-lg mx-auto mb-8 leading-relaxed">
+            <p className="text-muted max-w-lg mx-auto mb-8 leading-relaxed">
               Get a comprehensive overview of my professional experience, skills,
               education, and achievements — all in one document.
             </p>
@@ -53,7 +53,7 @@ export default function Resume() {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border border-border text-gray-300 font-semibold hover:bg-white/5 transition-colors text-lg"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border border-border text-muted-strong font-semibold hover:bg-foreground/5 transition-colors text-lg"
               >
                 <Eye size={20} />
                 View Online
