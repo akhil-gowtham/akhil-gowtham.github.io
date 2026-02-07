@@ -56,12 +56,6 @@ export default function Footer() {
               >
                 <Linkedin size={18} />
               </a>
-              <a
-                href={`tel:${personalInfo.phone}`}
-                className="w-10 h-10 rounded-lg glass flex items-center justify-center text-muted hover:text-primary hover:bg-primary/10 transition-colors"
-              >
-                <Phone size={18} />
-              </a>
             </div>
           </div>
         </div>
