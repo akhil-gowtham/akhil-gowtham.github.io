@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, Download } from "lucide-react";
+import { Mouse, Mail, Download } from "lucide-react";
 import { personalInfo } from "@/data/resume";
 
 export default function Hero() {
@@ -97,21 +97,22 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <ArrowDown size={24} className="text-muted" />
-          </motion.div>
-        </motion.div>
       </div>
+
+      {/* Scroll indicator — positioned relative to section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+        className="absolute bottom-28 left-1/2 -translate-x-1/2 z-10"
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <Mouse size={28} className="text-muted" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
