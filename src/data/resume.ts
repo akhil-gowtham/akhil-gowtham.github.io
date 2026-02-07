@@ -4,8 +4,7 @@ export const personalInfo = {
   title: "Senior Operations Executive",
   tagline:
     "Results-driven operations professional with 6+ years of experience in journal publication and logistics, specializing in process optimization, team leadership, and delivering exceptional quality at scale.",
-  email: "gowtham.senthil07@gmail.com",
-  phone: "+91 73582 55073",
+  email: "akhilgowtham@gmail.com",
   location: "Chennai, India",
   linkedin: "https://www.linkedin.com/in/gowtham-senthamilselvan",
 };
@@ -27,15 +26,27 @@ export interface Skill {
 
 export const skills: Skill[] = [
   { name: "Operations Management", category: "Operations", icon: "Settings" },
-  { name: "Project Planning & Execution", category: "Operations", icon: "ClipboardList" },
+  {
+    name: "Project Planning & Execution",
+    category: "Operations",
+    icon: "ClipboardList",
+  },
   { name: "Process Improvement", category: "Operations", icon: "TrendingUp" },
   { name: "Quality Assurance", category: "Operations", icon: "ShieldCheck" },
-  { name: "KPI Tracking & Reporting", category: "Analytics", icon: "BarChart3" },
+  {
+    name: "KPI Tracking & Reporting",
+    category: "Analytics",
+    icon: "BarChart3",
+  },
   { name: "Data Analysis", category: "Analytics", icon: "PieChart" },
   { name: "Team Leadership", category: "Leadership", icon: "Users" },
   { name: "Stakeholder Management", category: "Leadership", icon: "Handshake" },
   { name: "Vendor Coordination", category: "Leadership", icon: "Link" },
-  { name: "Client Relationship Management", category: "Leadership", icon: "UserCheck" },
+  {
+    name: "Client Relationship Management",
+    category: "Leadership",
+    icon: "UserCheck",
+  },
   { name: "MS Office Suite", category: "Tools", icon: "Monitor" },
   { name: "ERP & Production Tools", category: "Tools", icon: "Wrench" },
 ];
@@ -160,7 +171,8 @@ export interface Publication {
 
 export const publications: Publication[] = [
   {
-    title: "A Study on Employee Engagement with Reference to Rane Brake Lining Limited",
+    title:
+      "A Study on Employee Engagement with Reference to Rane Brake Lining Limited",
     journal: "International Journal of Applied Research",
     type: "Research Paper",
   },
@@ -174,7 +186,8 @@ export const publications: Publication[] = [
 export const achievements = [
   {
     title: "State Level Tennis Tournament",
-    description: "Participated in state-level tennis tournament, demonstrating competitive spirit and discipline.",
+    description:
+      "Participated in state-level tennis tournament, demonstrating competitive spirit and discipline.",
     icon: "Trophy",
   },
 ];
